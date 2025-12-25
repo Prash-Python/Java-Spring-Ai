@@ -3,4 +3,10 @@ spring:
     name: spring-ai-java-development
   ai:
     openai:
-      api-key: ${OPENAI_API_KEY}
+      api-key: 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
+#  ai:
+#    ollama:
+#      chat:
+#        model: mistral:latest
+#    model:
+#      chat: ollama
