@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: spring-ai-java-development
+  ai:
+    openai:
+      api-key: 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
