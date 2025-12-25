@@ -3,7 +3,7 @@ spring:
     name: spring-ai-java-development
   ai:
     openai:
-      api-key: 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
+      api-key: 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
 #  ai:
 #    ollama:
 #      chat:
