@@ -21,6 +21,7 @@ public class ProductControllerWithRag {
         this.chatClient = chatClient.build();
     }
 
+//    This will ensure that semantic search is very close to context. AI hallucination chances are minimized with RAG.
     @PostMapping("/rag/products")
     public ResponseEntity<String> getProductsWithRag(@RequestParam String query) {
         return ResponseEntity.ok(chatClient
