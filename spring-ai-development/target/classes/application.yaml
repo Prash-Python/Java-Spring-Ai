@@ -5,22 +5,47 @@ spring:
     openai:
       api-key:
         embedding:
-        options:
-          model: text-embedding-3-large
+          options:
+           model: text-embedding-ada-002
     vectorstore:
-      pgvector:
-        max-document-batch-size: 10000
-        index-type: HNSW
-        distance-type: COSINE_DISTANCE
-        dimensions: 1536
-  datasource:
-    url: jdbc:postgresql://localhost:5432/postgres
-    username: postgres
-    password: postgres
+      redis:
+        index-name: product-index
+        prefix: product
+  jpa:
+    show-sql: true
+  main:
+    allow-bean-definition-overriding: true
+  ## This config is for Radis Vector database.
+  data:
+    redis:
+      host: localhost
+      port: 6379
+
+  ## This config is only with PG Vector Database.
+#    vectorstore:
+#      pgvector:
+#        max-document-batch-size: 10000
+#        index-type: HNSW
+#        distance-type: COSINE_DISTANCE
+#        dimensions: 1536
+#        schema-validation: false
+
+  ## This config is only with PG Vector Database.
+#  datasource:
+#    url: jdbc:postgresql://localhost:5432/postgres
+#    username: postgres
+#    password: 1234
+#    driver-class-name: org.postgresql.Driver
+
+  ## This config is only with PG Vector Database.
+#  sql:
+#    init:
+#      schema-locations: classpath:init/schema.sql
+#      mode: always
 
 
 
-
+  ## This config is only with Ollama Model.
 #  ai:
 #    ollama:
 #      chat:
