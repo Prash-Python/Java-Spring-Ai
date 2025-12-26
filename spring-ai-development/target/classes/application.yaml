@@ -3,10 +3,20 @@ spring:
     name: spring-ai-java-development
   ai:
     openai:
-      api-key: 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
-      embedding:
+      api-key:
+        embedding:
         options:
           model: text-embedding-3-large
+    vectorstore:
+      pgvector:
+        max-document-batch-size: 10000
+        index-type: HNSW
+        distance-type: COSINE_DISTANCE
+        dimensions: 1536
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: postgres
 
 
 
