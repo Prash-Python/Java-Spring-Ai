@@ -20,6 +20,10 @@ spring:
     redis:
       host: localhost
       port: 6379
+  ## This config is for maximum audio file size for AI Transcription.
+  servlet:
+    multipart:
+      max-file-size: 10MB
 
   ## This config is only with PG Vector Database.
 #    vectorstore:

@@ -3,7 +3,7 @@ spring:
     name: spring-ai-java-development
   ai:
     openai:
-      api-key: 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
+      api-key: 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
       embedding:
           options:
            model: text-embedding-ada-002
@@ -20,6 +20,10 @@ spring:
     redis:
       host: localhost
       port: 6379
+  ## This config is for maximum audio file size for AI Transcription.
+  servlet:
+    multipart:
+      max-file-size: 10MB
 
   ## This config is only with PG Vector Database.
 #    vectorstore:
