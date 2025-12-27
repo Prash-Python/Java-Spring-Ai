@@ -3,8 +3,8 @@ spring:
     name: spring-ai-java-development
   ai:
     openai:
-      api-key: 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
-      embedding:
+      api-key:
+        embedding:
           options:
            model: text-embedding-ada-002
     vectorstore:
