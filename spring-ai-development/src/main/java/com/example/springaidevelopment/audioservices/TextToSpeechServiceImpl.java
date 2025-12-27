@@ -17,7 +17,7 @@ public class TextToSpeechServiceImpl implements TextToSpeechService {
         OpenAiAudioSpeechOptions options = OpenAiAudioSpeechOptions.builder()
                 .model(OpenAiAudioApi.TtsModel.TTS_1_HD.value)
                 .responseFormat(OpenAiAudioApi.SpeechRequest.AudioResponseFormat.MP3)
-                .voice(OpenAiAudioApi.SpeechRequest.Voice.ALLOY)
+                .voice(OpenAiAudioApi.SpeechRequest.Voice.ECHO)
                 .speed(1.0d)
                 .build();
         TextToSpeechPrompt prompt = new TextToSpeechPrompt(text, options);
